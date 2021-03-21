@@ -47,3 +47,18 @@ export const trainingData = async (url: string, apikey: string, environment: str
   };
   return discovery.listTrainingData(listTrainingDataParams).then(res => res).catch(err => err)
 }
+
+export const expansionData = async (url: string, apikey: string, environment: string, collection: string, version: string) => {
+  const discovery = new DiscoveryV1({
+    version: version,
+    authenticator: new IamAuthenticator({
+      apikey: apikey,
+    }),
+    serviceUrl: url,
+  });
+  const listExpansionsParams = {
+    environmentId: environment,
+    collectionId: collection,
+  };
+  return discovery.listExpansions(listExpansionsParams).then(res => res).catch(err => err)
+}
