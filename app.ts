@@ -43,10 +43,13 @@ const authfilename = 'Authentication.yaml';
     const index_str = await readUserInput('Index Number ? ')
     index_num = Number(index_str)
     if (!isNaN(index_num) && typeof index_num === 'number' && Number.isInteger(index_num)) {
-      credential_obj = yaml.load(fs.readFileSync(`./${exportfoldername}/${exportFolder[index_num]}/${authfilename}`, 'utf-8'))
-      console.log('number')
+      if (exportFolder[index_num]) {
+        credential_obj = yaml.load(fs.readFileSync(`./${exportfoldername}/${exportFolder[index_num]}/${authfilename}`, 'utf-8'))
+      } else {
+        console.log(red(`no such file or directory, open ./${exportfoldername}/${exportFolder[index_num]}/${authfilename}`))
+      }
     } else {
-      console.log('else')
+      console.log(red('Please select the index number to use.'))
     }
   } else {//新しい資格情報を用いてexportを行う
     try {
