@@ -31,7 +31,7 @@ version: CHANGE_VERSION '2019-04-30'
 exportName: CHANGE_EXPORTNAME　出力されるフォルダ名になります。エクスポート一覧で表示されます
 description: CHANGE_DESCRIPTION　エクスポート一覧で表示されます。
 ```
-4. tsファイルのコンパイルと実行
+4. tsファイルのコンパイル
 ```
 npm run build
 ```
