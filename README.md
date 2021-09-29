@@ -5,7 +5,7 @@
 
 仕様については下記リンクにあるQiitaの記事をご覧ください。
 
-https://qiita.com/RyotaAmano/private/aca416e99d47ea3de800
+https://qiita.com/RyotaAmano/items/d4a2fd8a0f67b45e69c6
 
 またプログラムの使用については**自己責任**でお願いいたします。
 
